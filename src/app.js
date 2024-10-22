@@ -9,7 +9,7 @@ import mocksRouter from "./routes/mocks.router.js";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-const connection = mongoose.connect()
+const connection = mongoose.connect("mongodb+srv://leandrocodex88:leandrocodex@cluster0.wpykl3d.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))

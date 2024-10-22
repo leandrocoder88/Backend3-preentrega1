@@ -1,9 +1,9 @@
-import {faker} from "@faker-js/faker"; 
+import { faker } from "@faker-js/faker";
 import { createHash } from "../utils/index.js";
 
 class MockingService {
-    static async generateMockingUsers(num){
-        const users = []; 
+    static async generateMockingUsers(num) {
+        const users = [];
 
         for (let i = 0; i < num; i++) {
             users.push({
@@ -15,12 +15,12 @@ class MockingService {
                 pets: []
             })
         }
-        return users; 
+        return users;
     }
 
-    static async generateMockingPets(num){
-        const pets = []; 
-        const species = ['perro', 'gato', 'conejo','tortuga'];
+    static async generateMockingPets(num) {
+        const pets = [];
+        const species = ['chimango', 'avestruz', 'aguila', 'casuario'];
 
         for (let i = 0; i < num; i++) {
             pets.push({
@@ -28,10 +28,10 @@ class MockingService {
                 specie: faker.helpers.arrayElement(species),
                 adopted: false,
                 birthDate: faker.date.past(),
-                image: "../public/img/coderDog.jpg"
+                image: "../public/img/casuarioporcurioso.jpg"
             })
         }
-        return pets; 
+        return pets;
     }
 }
 
